@@ -12,8 +12,10 @@ void main(List<String> args) {
   // Mengakses kalimat dalam string
   var kal = "Belajar Flutter";
   var contoh = kal[2] + kal[3];
-  var kata1 = kal[0] + kal[1] + kal[2] + kal[3] + kal[4] + kal[5] + kal[6];
-  var kata2 = kal[8] + kal[9] + kal[10] + kal[11] + kal[12] + kal[13] + kal[14];
+  var newKal = kal.split(' ');
+
+  var kata1 = newKal[0];
+  var kata2 = newKal[1];
 
   print("2. Mengakses kalimat dalam string");
   print("Contoh: ${contoh} \nKata 1: ${kata1} \nKata 2: ${kata2} \n");
@@ -74,6 +76,7 @@ selamatMalam() {
   print("Selamat Malam");
 }
 
+// Fungsi parameter nama dan hobby
 namaHobby(String? nama, String? hobby) {
   print("Nama Saya ${nama}, saya memiliki hobby ${hobby}");
 }
