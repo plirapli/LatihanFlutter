@@ -3,12 +3,29 @@ import 'dart:io';
 void main(List<String> args) {
   // Fungsi yang mengembalikan list berisi angka-angka
   print("Fungsi yang mengembalikan list berisi angka-angka");
-  print(range(1, 10));
+
+  stdout.write("Masukkan batas awal: ");
+  String? inAwal = stdin.readLineSync();
+
+  stdout.write("Masukkan batas akhir: ");
+  String? inAkhir = stdin.readLineSync();
+
+  if (inAwal != null && inAkhir != null) {
+    int a = int.parse(inAwal);
+    int b = int.parse(inAkhir);
+
+    if (a < b) print(range(a, b));
+  }
+
   print('');
 
   // List Multidimensi berisi data-data
   print("List Multidimensi berisi data-data");
-  // print(multiDList(2));
+
+  stdout.write("Masukkan jumlah data: ");
+  String? jml = stdin.readLineSync();
+
+  if (jml != null && int.parse(jml) > 0) print(multiDList(int.parse(jml)));
 }
 
 // Fungsi yang mengembalikan list berisi angka-angka
