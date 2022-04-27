@@ -54,18 +54,16 @@ class SignUp extends StatelessWidget {
                   Navigator.pushNamed(context, '/');
                 },
               ),
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text("Sudah punya akun?"),
-                    TextButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/');
-                        },
-                        child: const Text("Login"))
-                  ],
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Sudah punya akun?"),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/');
+                      },
+                      child: const Text("Login"))
+                ],
               )
             ],
           )
